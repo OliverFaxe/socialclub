@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root { --ink: #18231f; --paper: #f3f0e8; --lime: #d3f36b; --coral: #ef765d; --muted: #69736c; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+button, input, textarea { font: inherit; }
+.site-shell { min-height: 100vh; padding: 26px 5vw 20px; display: flex; flex-direction: column; background: radial-gradient(circle at 82% 10%, #e4e9c8 0, transparent 26%), var(--paper); }
+.topbar, footer { display: flex; justify-content: space-between; align-items: center; max-width: 1280px; width: 100%; margin: 0 auto; }
+.wordmark { color: var(--ink); font-size: 1.25rem; font-weight: 800; letter-spacing: -.06em; text-decoration: none; }
+.wordmark span { color: var(--coral); }
+.nav-note, footer { color: var(--muted); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 460px); gap: 10vw; align-items: center; max-width: 1280px; width: 100%; margin: auto; padding: 8vh 7vw 12vh; }
+.intro { max-width: 650px; }
+.eyebrow { color: var(--coral); font-size: .7rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+h1 { max-width: 680px; margin: 22px 0; font-size: clamp(3.8rem, 7vw, 7.5rem); line-height: .88; letter-spacing: -.085em; font-weight: 800; }
+h1 em { color: var(--coral); font-family: Georgia, serif; font-weight: 400; letter-spacing: -.09em; }
+.intro-copy { max-width: 430px; color: #56615a; font-size: 1.05rem; line-height: 1.55; }
+.signal-row { display: flex; align-items: center; gap: 9px; margin-top: 42px; color: var(--muted); font-size: .75rem; }
+.signal-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 5px #ef765d2a; }
+.flow-panel { padding: 30px; border: 1px solid #18231f1f; background: #faf9f4; box-shadow: 16px 16px 0 #d9dfc4; }
+.panel-topline { display: flex; justify-content: space-between; border-bottom: 1px solid #18231f22; padding-bottom: 15px; color: var(--muted); font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.form-heading { margin: 30px 0; }.form-heading h2, .success-state h2 { margin: 0 0 7px; font-size: 2rem; letter-spacing: -.06em; }.form-heading p, .success-state p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+label { display: block; margin: 18px 0; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+input, textarea { display: block; width: 100%; margin-top: 7px; padding: 13px 0; border: 0; border-bottom: 1px solid #18231f3b; outline: 0; resize: vertical; background: transparent; color: var(--ink); font-size: 1rem; letter-spacing: 0; text-transform: none; transition: border-color .2s; }
+input:focus, textarea:focus { border-color: var(--coral); } input::placeholder, textarea::placeholder { color: #a2aaa3; }
+button { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 30px; padding: 15px 17px; border: 0; background: var(--ink); color: var(--paper); cursor: pointer; font-weight: 800; transition: background .2s, transform .2s; } button:hover { background: var(--coral); transform: translateY(-2px); } button:disabled { cursor: wait; opacity: .65; transform: none; }
+.progress { display: flex; gap: 7px; margin-top: 28px; }.progress span { width: 28px; height: 3px; background: #d4d8ce; }.progress .active { background: var(--coral); }.progress .complete { background: var(--lime); }
+.error-message { margin: 18px 0 0; color: #b34634; font-size: .8rem; }.success-state { padding: 48px 0 20px; }.success-mark { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 25px; border-radius: 50%; background: var(--lime); font-size: 1.4rem; font-weight: 800; }
+footer { padding-top: 20px; border-top: 1px solid #18231f1c; }
+@media (max-width: 800px) { .site-shell { padding: 22px 6vw 18px; }.nav-note { display: none; }.hero-grid { display: block; padding: 13vh 0 10vh; }.intro { margin-bottom: 64px; } h1 { font-size: clamp(3.6rem, 18vw, 6rem); }.flow-panel { box-shadow: 9px 9px 0 #d9dfc4; padding: 24px; } footer { font-size: .6rem; } }
